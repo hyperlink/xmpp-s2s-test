@@ -1,0 +1,12 @@
+db=bacula
+bacula_dir=/etc/bacula
+showdirs=0
+bextract=bextract
+user=bacula
+btape=btape
+driver=Pg
+bls=bls
+apply=1
+pass=
+wait=1
+init_start=0

@@ -1,0 +1,12 @@
+$ttl 38400
+nodexmpp.com.	IN	SOA	ns.nodexmpp.com. admin.nodexmpp.com. (
+			1461245636
+			10800
+			3600
+			604800
+			38400 )
+nodexmpp.com.	IN	NS	ns.nodexmpp.com.
+nodexmpp.com.	IN	A	192.168.99.1
+_xmpp-server._tcp.nodexmpp.com.	IN	SRV	1 1 5269 xmpp
+xmpp.nodexmpp.com.	IN	A	192.168.99.1
+ns.nodexmpp.com.	IN	A	172.17.0.1

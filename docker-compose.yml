@@ -1,0 +1,27 @@
+prosody:
+  image: prosody/prosody:trunk
+  privileged: true
+  dns:
+    - 172.17.0.1
+  ports:
+    - "80:80"
+    - "5222:5222" # c2s port
+    - "5269:5269" # s2s port
+    - "5347:5347" # XMPP component port
+    - "5280:5280" # BOSH / websocket port
+    - "5281:5281" # Secure BOSH / websocket port
+  environment:
+    LOCAL: "test-user"
+    DOMAIN: "example.com"
+    PASSWORD: "test"
+  volumes:
+    - $PWD/prosody/prosody.cfg.lua:/etc/prosody/prosody.cfg.lua
+    - $PWD/prosody/certs:/etc/prosody/certs
+    - $PWD/prosody/certificates.crt:/etc/ssl/certs/certificates.crt
+bind:
+  image: sameersbn/bind:latest
+  ports:
+    - "53:53/udp"
+    - "10000:10000"
+  volumes:
+   - $PWD/bind_data:/data
