@@ -9,7 +9,7 @@
   "author": "Xiaoxin Lu <javascript@yahoo.com>",
   "license": "ISC",
   "dependencies": {
-    "node-xmpp-core": "^5.0.1",
+    "node-xmpp-core": "^5.0.8",
     "node-xmpp-server": "hyperlink/server#integrated-sasl-fixes"
   }
 }
